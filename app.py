@@ -14,7 +14,7 @@ def index():
 def sobre():
   return 'Sobre o <strong>projeto</strong>'
 
-@app.route('/telegram', methods="POST")
+@app.route('/telegram', methods=["POST"])
 def telegram_update():
   update = request.json
   url_envio_mensagem = f'https://api.telegram.org/bot{BOT_TOKEN}/sendMessage'
